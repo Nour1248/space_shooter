@@ -8,7 +8,7 @@
             "name": "(gdb) Launch",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceFolder}/a.out",
+            "program": "${workspaceFolder}/bin/space-shooter.exe",
             "args": ["-g","-lSDL2","-lSDL2_image", "-std=c11"],
             "stopAtEntry":  true,
             "cwd": "..",
