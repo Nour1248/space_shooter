@@ -1,0 +1,27 @@
+{
+    "files.associations": {
+        "sdl.h": "c",
+        "structs.h": "c",
+        "game.h": "c",
+        "sdl_image.h": "c",
+        "time.h": "c",
+        "stdbool.h": "c",
+        "system_error": "c",
+        "error.h": "c",
+        "errno.h": "c",
+        "threads.h": "c",
+        "sdl_timer.h": "c",
+        "limits.h": "c",
+        "sdl2_gfxprimitives.h": "c",
+        "stdlib.h": "c",
+        "string.h": "c",
+        "math.h": "c",
+        "sdl_thread.h": "c",
+        "pthread.h": "c",
+        "malloc.h": "c",
+        "fcntl.h": "c",
+        "features.h": "c",
+        "sdl_cpuinfo.h": "c",
+        "close_code.h": "c"
+    }
+}
