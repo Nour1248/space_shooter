@@ -25,11 +25,11 @@ typedef struct
 
 typedef struct
 {
+  bool is_working;
   SDL_Texture *texture;
   uint8_t idx;
   uint64_t start;
   uint16_t delay;
-  bool is_working;
   SDL_Rect rect;
 } Animation;
 

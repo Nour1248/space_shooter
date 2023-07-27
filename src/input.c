@@ -3,21 +3,20 @@
 #include "game.h"
 
 void
-handle_input (void)
+handle_input (SDL_Event *event)
 {
-  SDL_Event event;
-  while (SDL_PollEvent (&event))
+  while (SDL_PollEvent (event))
     {
-      switch (event.key.type)
+      switch (event->key.type)
         {
         case SDL_QUIT:
           exit (0);
           break;
         case SDL_KEYDOWN:
-          handle_keydown (&event.key);
+          handle_keydown (&event->key);
           break;
         case SDL_KEYUP:
-          handle_keyup (&event.key);
+          handle_keyup (&event->key);
           break;
         }
     }

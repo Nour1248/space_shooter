@@ -52,7 +52,7 @@ extern char *g_explosionSheet[9];
 extern void init_sdl (void);
 
 // input protos
-extern void handle_input (void);
+extern void handle_input (SDL_Event *event);
 
 extern void handle_keydown (SDL_KeyboardEvent *event);
 
