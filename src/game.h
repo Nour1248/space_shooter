@@ -23,10 +23,10 @@
 #define SHIP_VELOCITY 20
 #define BULLET_VELOCITY 10
 
-#define DELAY(ft)                                                                                                      \
-    if (ft < DELTA)                                                                                                    \
-    {                                                                                                                  \
-        SDL_Delay(DELTA - ft);                                                                                         \
+#define DELAY(ft)                                                             \
+  if (ft < DELTA)                                                             \
+    {                                                                         \
+      SDL_Delay (DELTA - ft);                                                 \
     }
 
 // global objs/vars
@@ -49,55 +49,55 @@ extern Animation *g_animationUnits[ANIMATION_UNIT_COUNT];
 extern char *g_explosionSheet[9];
 
 // init protos
-extern void init_sdl(void);
+extern void init_sdl (void);
 
 // input protos
-extern void handle_input(void);
+extern void handle_input (void);
 
-extern void handle_keydown(SDL_KeyboardEvent *event);
+extern void handle_keydown (SDL_KeyboardEvent *event);
 
-extern void handle_keyup(SDL_KeyboardEvent *event);
+extern void handle_keyup (SDL_KeyboardEvent *event);
 
 // draw protos
-extern void clean_up(void);
+extern void clean_up (void);
 
-extern void clear(void);
+extern void clear (void);
 
-extern void render_scene(void);
+extern void render_scene (void);
 
-extern SDL_Texture *load_texture(char *filename);
+extern SDL_Texture *load_texture (char *filename);
 
-extern void blit(Entity *entity);
+extern void blit (Entity *entity);
 
-extern void blit_scaled(Entity *entity, int32_t w, int32_t h);
+extern void blit_scaled (Entity *entity, int32_t w, int32_t h);
 
-extern void blit_scaledAnimation(Animation *a, SDL_Rect *r);
+extern void blit_scaledAnimation (Animation *a, SDL_Rect *r);
 
-extern bool is_outOfBounds(Entity *e);
+extern bool is_outOfBounds (Entity *e);
 
-extern bool are_colliding(SDL_Rect *r1, SDL_Rect *r2);
+extern bool are_colliding (SDL_Rect *r1, SDL_Rect *r2);
 
-extern void animate_player(Entity *entity);
+extern void animate_player (Entity *entity);
 
-extern void init_bullets(void);
+extern void init_bullets (void);
 
-extern void blit_bullets(Entity **bulls);
+extern void blit_bullets (Entity **bulls);
 
-extern void shoot(Entity **bulls, Entity *player);
+extern void shoot (Entity **bulls, Entity *player);
 
-extern void animate_bullets(Entity **bulls);
+extern void animate_bullets (Entity **bulls);
 
-extern void init_meteors(void);
+extern void init_meteors (void);
 
-extern void blit_meteors(Entity **meteors);
+extern void blit_meteors (Entity **meteors);
 
-extern void init_animationUnits(void);
+extern void init_animationUnits (void);
 
-extern void animation(Animation *a, char **sheet, size_t sheet_size);
+extern void animation (Animation *a, char **sheet, size_t sheet_size);
 
-extern void play_explosionAnimation(void);
+extern void play_explosionAnimation (void);
 
-extern void animate_meteors(void);
+extern void animate_meteors (void);
 
 // #ifdef __cplusplus
 // }

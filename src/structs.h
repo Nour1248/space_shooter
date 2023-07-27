@@ -7,35 +7,36 @@
 
 typedef struct
 {
-    SDL_Renderer *renderer;
-    SDL_Window *window;
-    bool up;
-    bool down;
-    bool right;
-    bool left;
-    bool fire;
+  SDL_Renderer *renderer;
+  SDL_Window *window;
+  bool up;
+  bool down;
+  bool right;
+  bool left;
+  bool fire;
 } App;
 
 typedef struct
 {
-    SDL_Texture *texture;
-    SDL_Rect rect;
-    uint8_t hp;
+  SDL_Texture *texture;
+  SDL_Rect rect;
+  uint8_t hp;
 } Entity;
 
 typedef struct
 {
-    SDL_Texture *texture;
-    uint8_t idx;
-    uint64_t start;
-    uint32_t delay;
-    SDL_Rect rect;
+  SDL_Texture *texture;
+  uint8_t idx;
+  uint64_t start;
+  uint16_t delay;
+  bool is_working;
+  SDL_Rect rect;
 } Animation;
 
 typedef struct
 {
-    SDL_Texture *texture;
-    SDL_Rect rect;
+  SDL_Texture *texture;
+  SDL_Rect rect;
 } Ui;
 
 #endif //_STRUCTS_H
