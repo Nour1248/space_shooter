@@ -11,7 +11,7 @@
             "program": "${workspaceFolder}/bin/space-shooter.exe",
             "args": ["-g","-lSDL2","-lSDL2_image", "-std=c11"],
             "stopAtEntry":  true,
-            "cwd": "..",
+            "cwd": "${workspaceFolder}",
             "environment": [],
             "externalConsole": false,
             "MIMode": "gdb",

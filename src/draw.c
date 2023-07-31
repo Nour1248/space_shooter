@@ -1,26 +1,9 @@
-#include <SDL2/SDL.h>
-#include <SDL2/SDL_image.h>
+#include <SDL.h>
+#include <SDL_image.h>
 #include <stdbool.h>
+#include <stdio.h>
 
 #include "game.h"
-
-//
-void
-clean_up (void)
-{
-  for (size_t i = 0; i < BULLETS_COUNT; i++)
-    {
-      free (g_bullets[i]);
-    }
-  for (size_t i = 0; i < METEORS_COUNT; i++)
-    {
-      free (g_meteors[i]);
-    }
-  SDL_DestroyRenderer (g_app.renderer);
-  SDL_DestroyWindow (g_app.window);
-  SDL_Quit ();
-  IMG_Quit ();
-}
 
 //
 void
@@ -291,6 +274,7 @@ animate_meteors (void)
           if (are_colliding (&g_meteors[i]->rect, &g_bullets[j]->rect)
               && g_meteors[i]->hp != 0)
             {
+              boom ();
               g_bullets[j]->rect.x = FUCK_OFF;
               g_bullets[j]->rect.y = FUCK_OFF;
               g_animationUnits[idx]->rect = g_meteors[i]->rect;

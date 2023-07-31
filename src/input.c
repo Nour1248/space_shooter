@@ -1,4 +1,4 @@
-#include <SDL2/SDL.h>
+#include <SDL.h>
 
 #include "game.h"
 
@@ -10,6 +10,7 @@ handle_input (SDL_Event *event)
       switch (event->key.type)
         {
         case SDL_QUIT:
+          // clean_up ();
           exit (0);
           break;
         case SDL_KEYDOWN:
@@ -42,6 +43,7 @@ handle_keydown (SDL_KeyboardEvent *event)
           g_app.left = true;
           break;
         case SDL_SCANCODE_SPACE:
+          pewpew ();
           g_app.fire = true;
           break;
         default:

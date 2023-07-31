@@ -22,7 +22,10 @@
     "fcntl.h": "c",
     "features.h": "c",
     "sdl_cpuinfo.h": "c",
-    "close_code.h": "c"
+    "close_code.h": "c",
+    "sdl_audio.h": "c",
+    "sdl_mixer.h": "c",
+    "sdl_main.h": "c"
   },
   "editor.defaultFormatter": "xaver.clang-format",
   "C_Cpp.default.compilerPath": "/usr/bin/clang"

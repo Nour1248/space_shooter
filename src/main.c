@@ -1,5 +1,6 @@
-#include <SDL2/SDL.h>
-#include <SDL2/SDL_image.h>
+#include <SDL.h>
+#include <SDL_image.h>
+#include <SDL_main.h>
 #include <limits.h>
 #include <stdlib.h>
 
@@ -12,7 +13,8 @@ int
 main ()
 {
   //
-  init_sdl ();
+  init_libs ();
+  init_audio ();
   init_bullets ();
   init_meteors ();
   init_animationUnits ();
@@ -36,6 +38,8 @@ main ()
 
   // double fps;
   SDL_Event event;
+
+  play_uiMusic ();
 
   while (69)
     {

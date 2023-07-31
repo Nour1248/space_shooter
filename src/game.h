@@ -1,14 +1,14 @@
 #ifndef _GAME_H
 #define _GAME_H 69
 
-// #ifdef __cplusplus
-// extern "C"
-// {
-// #endif
-
-#include <SDL2/SDL.h>
-#include <pthread.h>
+#include <SDL.h>
+#include <SDL_mixer.h>
 #include <stdbool.h>
+
+#ifdef __cplusplus // MAYBE IN THE FUTURE
+extern "C"
+{
+#endif
 
 #include "structs.h"
 
@@ -29,78 +29,94 @@
       SDL_Delay (DELTA - ft);                                                 \
     }
 
-// global objs/vars
-extern int32_t g_WIDTH;
+  // global objs/vars
+  extern int32_t g_WIDTH;
 
-extern int32_t g_HEIGHT;
+  extern int32_t g_HEIGHT;
 
-extern uint64_t g_clock;
+  extern uint64_t g_clock;
 
-extern App g_app;
+  extern App g_app;
 
-extern Entity g_player;
+  extern Entity g_player;
 
-extern Entity *g_bullets[BULLETS_COUNT];
+  extern Entity *g_bullets[BULLETS_COUNT];
 
-extern Entity *g_meteors[METEORS_COUNT];
+  extern Entity *g_meteors[METEORS_COUNT];
 
-extern Animation *g_animationUnits[ANIMATION_UNIT_COUNT];
+  extern Animation *g_animationUnits[ANIMATION_UNIT_COUNT];
 
-extern char *g_explosionSheet[9];
+  extern char *g_explosionSheet[9];
 
-// init protos
-extern void init_sdl (void);
+  extern Mix_Chunk *g_pewpewChunk;
 
-// input protos
-extern void handle_input (SDL_Event *event);
+  extern Mix_Chunk *g_boomChunk;
 
-extern void handle_keydown (SDL_KeyboardEvent *event);
+  extern Mix_Music *g_uiMusic;
 
-extern void handle_keyup (SDL_KeyboardEvent *event);
+  // init protos
+  extern void init_libs (void);
 
-// draw protos
-extern void clean_up (void);
+  extern void clean_up (void);
 
-extern void clear (void);
+  // input protos
+  extern void handle_input (SDL_Event *event);
 
-extern void render_scene (void);
+  extern void handle_keydown (SDL_KeyboardEvent *event);
 
-extern SDL_Texture *load_texture (char *filename);
+  extern void handle_keyup (SDL_KeyboardEvent *event);
 
-extern void blit (Entity *entity);
+  // draw protos
 
-extern void blit_scaled (Entity *entity, int32_t w, int32_t h);
+  extern void clear (void);
 
-extern void blit_scaledAnimation (Animation *a, SDL_Rect *r);
+  extern void render_scene (void);
 
-extern bool is_outOfBounds (Entity *e);
+  extern SDL_Texture *load_texture (char *filename);
 
-extern bool are_colliding (SDL_Rect *r1, SDL_Rect *r2);
+  extern void blit (Entity *entity);
 
-extern void animate_player (Entity *entity);
+  extern void blit_scaled (Entity *entity, int32_t w, int32_t h);
 
-extern void init_bullets (void);
+  extern void blit_scaledAnimation (Animation *a, SDL_Rect *r);
 
-extern void blit_bullets (Entity **bulls);
+  extern bool is_outOfBounds (Entity *e);
 
-extern void shoot (Entity **bulls, Entity *player);
+  extern bool are_colliding (SDL_Rect *r1, SDL_Rect *r2);
 
-extern void animate_bullets (Entity **bulls);
+  extern void animate_player (Entity *entity);
 
-extern void init_meteors (void);
+  extern void init_bullets (void);
 
-extern void blit_meteors (Entity **meteors);
+  extern void blit_bullets (Entity **bulls);
 
-extern void init_animationUnits (void);
+  extern void shoot (Entity **bulls, Entity *player);
 
-extern void animation (Animation *a, char **sheet, size_t sheet_size);
+  extern void animate_bullets (Entity **bulls);
 
-extern void play_explosionAnimation (void);
+  extern void init_meteors (void);
 
-extern void animate_meteors (void);
+  extern void blit_meteors (Entity **meteors);
 
-// #ifdef __cplusplus
-// }
-// #endif
+  extern void init_animationUnits (void);
+
+  extern void animation (Animation *a, char **sheet, size_t sheet_size);
+
+  extern void play_explosionAnimation (void);
+
+  extern void animate_meteors (void);
+
+  // audio protos
+  extern void init_audio ();
+
+  extern void pewpew ();
+
+  extern void boom ();
+
+  extern void play_uiMusic ();
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif //_GAME_H
