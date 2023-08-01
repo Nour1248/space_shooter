@@ -274,7 +274,7 @@ animate_meteors (void)
           if (are_colliding (&g_meteors[i]->rect, &g_bullets[j]->rect)
               && g_meteors[i]->hp != 0)
             {
-              // boom ();
+              boom ();
               g_bullets[j]->rect.x = FUCK_OFF;
               g_bullets[j]->rect.y = FUCK_OFF;
               g_animationUnits[idx]->rect = g_meteors[i]->rect;

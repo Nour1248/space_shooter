@@ -12,7 +12,7 @@ void run_app(void){
 
   //
   init_libs ();
-  // init_audio ();
+  init_audio ();
   init_bullets ();
   init_meteors ();
   init_animationUnits ();
@@ -69,6 +69,8 @@ void run_app(void){
 
       render_scene ();
 
+    }
+}
       // for (size_t i = 0; i < ANIMATION_UNIT_COUNT; i++)
       //   {
       //     if (g_animationUnits[i]->is_working == true)
@@ -89,5 +91,3 @@ void run_app(void){
 
       // frame_time = SDL_GetTicks64 () - g_clock; // FBS CTRL
       // DELAY (frame_time)                        // FBS CTRL
-    }
-}

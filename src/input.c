@@ -43,7 +43,7 @@ handle_keydown (SDL_KeyboardEvent *event)
           g_app.left = true;
           break;
         case SDL_SCANCODE_SPACE:
-          // pewpew ();
+          pewpew ();
           g_app.fire = true;
           break;
         default:

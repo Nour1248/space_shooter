@@ -7,7 +7,6 @@
 
 int32_t g_WIDTH = 1280;
 int32_t g_HEIGHT = 720;
-// App g_app;
 
 void
 init_libs (void)

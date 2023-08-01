@@ -48,11 +48,11 @@ extern "C"
 
   extern char *g_explosionSheet[9];
 
-  // extern Mix_Chunk *g_pewpewChunk;
+  extern Mix_Chunk *g_pewpewChunk;
 
-  // extern Mix_Chunk *g_boomChunk;
+  extern Mix_Chunk *g_boomChunk;
 
-  // extern Mix_Music *g_uiMusic;
+  extern Mix_Music *g_uiMusic;
 
   //app proto
   extern void run_app (void);
@@ -110,13 +110,13 @@ extern "C"
   extern void animate_meteors (void);
 
   // audio protos
-  // extern void init_audio ();
+  extern void init_audio ();
 
-  // extern void pewpew ();
+  extern void pewpew ();
 
-  // extern void boom ();
+  extern void boom ();
 
-  // extern void play_uiMusic ();
+  extern void play_uiMusic ();
 
 #ifdef __cplusplus
 }
