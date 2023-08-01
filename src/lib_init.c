@@ -43,7 +43,7 @@ init_libs (void)
       exit (1);
     }
   IMG_Init (IMG_INIT_PNG);
-  // Mix_Init (MIX_INIT_OGG);
+  Mix_Init (MIX_INIT_OGG);
 }
 
 void
@@ -68,9 +68,9 @@ clean_up (void)
 
   IMG_Quit ();
 
-  // Mix_CloseAudio ();
-  // Mix_FreeChunk (g_boomChunk);
-  // Mix_FreeChunk (g_pewpewChunk);
-  // Mix_FreeMusic (g_uiMusic);
-  // Mix_Quit ();
+  Mix_CloseAudio ();
+  Mix_FreeChunk (g_boomChunk);
+  Mix_FreeChunk (g_pewpewChunk);
+  Mix_FreeMusic (g_uiMusic);
+  Mix_Quit ();
 }

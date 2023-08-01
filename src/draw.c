@@ -73,7 +73,7 @@ is_outOfBounds (Entity *e)
 //
 bool
 are_colliding (SDL_Rect *r1, SDL_Rect *r2)
-{                              // thx mdn
+{                              
   if (r1->x < r2->x + r2->w && // x axis
       r1->x + r1->w > r2->x && //// //
       r1->y < r2->y + r2->h && // y axis

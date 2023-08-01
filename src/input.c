@@ -10,7 +10,6 @@ handle_input (SDL_Event *event)
       switch (event->key.type)
         {
         case SDL_QUIT:
-          // clean_up ();
           exit (0);
           break;
         case SDL_KEYDOWN:
