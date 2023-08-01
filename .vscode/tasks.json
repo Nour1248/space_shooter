@@ -3,10 +3,10 @@
 	"tasks": [
 		{
 			"type": "make",
-			"targetName": "all",
+			"targetName": "dbg",
 			"makeFileRelativePath": "Makefile",
 			"problemMatcher": [],
-			"label": "make: all",
+			"label": "make: dbg",
 			"detail": "./Makefile",
 			"group": {
 				"kind": "build",

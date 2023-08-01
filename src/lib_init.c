@@ -7,7 +7,7 @@
 
 int32_t g_WIDTH = 1280;
 int32_t g_HEIGHT = 720;
-App g_app;
+// App g_app;
 
 void
 init_libs (void)
@@ -44,7 +44,7 @@ init_libs (void)
       exit (1);
     }
   IMG_Init (IMG_INIT_PNG);
-  Mix_Init (MIX_INIT_OGG);
+  // Mix_Init (MIX_INIT_OGG);
 }
 
 void
@@ -58,10 +58,10 @@ clean_up (void)
     {
       free (g_meteors[i]);
     }
-    
-  Mix_FreeChunk (g_boomChunk);
-  Mix_FreeChunk (g_pewpewChunk);
-  Mix_FreeMusic (g_uiMusic);
+  for (size_t i = 0; i < ANIMATION_UNIT_COUNT; i++)
+  {
+    free (g_animationUnits[i]);
+  }
 
   SDL_DestroyRenderer (g_app.renderer);
   SDL_DestroyWindow (g_app.window);
@@ -69,6 +69,9 @@ clean_up (void)
 
   IMG_Quit ();
 
-  Mix_CloseAudio ();
-  Mix_Quit ();
+  // Mix_CloseAudio ();
+  // Mix_FreeChunk (g_boomChunk);
+  // Mix_FreeChunk (g_pewpewChunk);
+  // Mix_FreeMusic (g_uiMusic);
+  // Mix_Quit ();
 }
