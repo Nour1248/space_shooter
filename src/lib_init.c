@@ -50,17 +50,13 @@ void
 clean_up (void)
 {
   for (size_t i = 0; i < BULLETS_COUNT; i++)
-    {
-      free (g_bullets[i]);
-    }
+    free (g_bullets[i]);
+
   for (size_t i = 0; i < METEORS_COUNT; i++)
-    {
-      free (g_meteors[i]);
-    }
+    free (g_meteors[i]);
+
   for (size_t i = 0; i < ANIMATION_UNIT_COUNT; i++)
-  {
     free (g_animationUnits[i]);
-  }
 
   SDL_DestroyRenderer (g_app.renderer);
   SDL_DestroyWindow (g_app.window);
