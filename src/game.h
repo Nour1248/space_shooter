@@ -1,8 +1,8 @@
 #ifndef _GAME_H
 #define _GAME_H 69
 
-#include <SDL.h>
-#include <SDL_mixer.h>
+#include <SDL2/SDL.h>
+#include <SDL2/SDL_mixer.h>
 #include <stdbool.h>
 
 #ifdef __cplusplus // why not

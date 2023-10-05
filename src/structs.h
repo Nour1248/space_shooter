@@ -1,7 +1,7 @@
 #ifndef _STRUCTS_H
 #define _STRUCTS_H 69
 
-#include <SDL.h>
+#include <SDL2/SDL.h>
 #include <stdbool.h>
 
 typedef struct
