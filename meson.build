@@ -1,5 +1,5 @@
 project( 'SPACE SHOOTER' ,'c' )
-deps = [ dependency('SDL2'), dependency('SDL2_image'), dependency('SDL2_mixer') ]
+deps = [ dependency('SDL2'), dependency('SDL2_image'), dependency('SDL2_mixer'), dependency('glib-2.0') ]
 src = [
     'src/app.c',
     'src/audio.c',
